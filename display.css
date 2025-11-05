@@ -1,0 +1,23 @@
+/* h2{
+    display: inline;
+    background-color: pink;
+} */
+span {
+    /* display: block; */
+    /* background-color: yellowgreen; */
+    border: 2px solid black;
+    height: 200px;
+    width: 300px;
+    padding: 50px;
+    margin:50px ;
+
+    /* border and heinght dont apply to span and margin and heingt is only apply L&R NOT T&B */
+}
+
+div {
+    border: 2px solid black;
+    height: 100px;
+    width: 200px;
+    padding: 50px;
+    margin: 20px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Attribute Selector Example</title>
+    <style>
+        /* 1. Any element with href attribute */
+        a[href] {
+            color: blue;
+            text-decoration: none;
+        }
+
+        /* 2. Exact value match */
+        a[target="_blank"] {
+            color: red;
+        }
+
+        /* 3. Attribute contains word 'external' in class */
+        a[class~="external"] {
+            font-weight: bold;
+        }
+
+        /* 4. Attribute value starts with "https" */
+        a[href^="https"] {
+            background-color: lightyellow;
+        }
+
+        /* 5. Attribute value ends with ".pdf" */
+        a[href$=".pdf"] {
+            color: green;
+        }
+
+        /* 6. Attribute value contains "wiki" */
+        a[href*="wiki"] {
+            font-style: italic;
+        }
+
+        /* Style input fields */
+        input[type="text"] {
+            border: 2px solid orange;
+            padding: 5px;
+        }
+
+        input[type="email"] {
+            border: 2px solid blue;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CSS Attribute Selectors Demo</h2>
+
+    <a href="https://www.google.com" target="_blank">Google</a><br>
+    <a href="https://www.wikipedia.org" target="_self">Wikipedia</a><br>
+    <a href="notes.pdf">Download Notes</a><br>
+    <a href="https://www.example.com" class="external">Example</a><br><br>
+
+    <input type="text" placeholder="Enter your name">
+    <input type="email" placeholder="Enter your email">
+
+</body>
+</html>
