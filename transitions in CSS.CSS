@@ -1,0 +1,21 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    /* transition-duration: 1s ; */
+    margin-top: 400px;
+    margin: 0 auto;
+    transition: margin-top 2s ease-in 0.7s;
+    /* transition-delay: 2s;
+    transition-timing-function: steps(); */
+
+}
+
+div:hover{
+    background-color: black;
+    margin-top: 400px;
+    /* border-radius: 50%; */
+    background-color: pink ;
+
+}
+
