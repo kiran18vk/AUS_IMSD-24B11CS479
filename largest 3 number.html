@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function largernumber(){
+    let n1 = document.getElementById('num1').value;
+    let n2 = document.getElementById('num2').value;
+    let n3 = document.getElementById('num3').value;
+
+    if (n1 === n2 && n2 === n3) {
+        document.getElementById("res").innerHTML = "EQUAL NUMBERS";
+    } else if (n1 > n2 && n1 > n3) {
+        document.getElementById("res").innerHTML = n1 + " IS LARGER NUMBER";
+    } else if (n2 > n1 && n2 > n3) {
+        document.getElementById("res").innerHTML = n2 + " IS LARGER NUMBER";
+    } else {
+        document.getElementById("res").innerHTML = n3 + " IS LARGER NUMBER";
+    }
+}
+    </script>
+</head>
+<body>
+    <h2>Enter 3 Numbers</h2>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <input type="number" id="num3">
+    <button onclick="largernumber()">Submit</button>
+    Result : <span id="res"></span>
+</body>
+</html>

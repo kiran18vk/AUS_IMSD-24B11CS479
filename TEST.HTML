@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+function applychanges()
+{
+    let id = prompt("Enter your ID");
+    let branch = prompt("Enter your Branch");
+    let name = prompt("Enter your Name");
+    document.getElementById("name").innerHTML=name
+    document.getElementById("id").innerHTML=id
+    document.getElementById("branch").innerHTML=branch
+
+}
+function reversechanges()
+{
+    document.getElementById("name").innerHTML=""
+    document.getElementById("id").innerHTML=""
+    document.getElementById("branch").innerHTML=""
+}
+   </script>
+</head>
+<body>
+   <label>ID:</label>
+    <p id="id"></p>
+    <label> Name:</label>
+    <p id="name"></p>
+    <label>BRANCH:</label>
+    <p id="branch"></p>
+    <button onclick="applychanges()">APPLY</button>
+    <button onclick="reversechanges()">reversechanges</button>
+</body>
+</html>

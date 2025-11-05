@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+      function FindGrade(){
+        let s1= Number(document.getElementById("toc").value)
+        let s2=Number(document.getElementById("dms").value)
+        let s3= Number(document.getElementById("cpp").value)
+        let s4= Number(document.getElementById("ase").value)
+        let s5= Number(document.getElementById("dbms").value)
+        
+        const avg=(s1+s2+s3+s4+s5)/5;
+        let grade="";
+        if(avg>=75)
+        grade="DISTINCTION";
+    else if(avg>=60)
+    grade="first class";
+         else if(avg>=50)
+    grade="second class";
+         else if(avg>=40)
+    grade="third class";
+         else
+         grade="fail";
+        document.getElementById("res").innerHTML="<h2>"+grade +"</h2>";
+      }
+    </script>
+</head>
+<body>
+    <div class="container"> 
+        <h1> Enter subject marks:</h1><br>
+        TOC:<input type="number" id="toc"><br>
+        DMS:<input type="number" id="dms"><br>
+        CPP:<input type="number" id="cpp"><br>
+        ASE:<input type="number" id="ase"><br>
+        DBMS:<input type="number" id="dbms"><br>
+
+        <h2> Result:</h2> <p id="res"></p>
+        <button onclick="FindGrade()">Find grade</button>
+        
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function calculateFactorial()
+        {
+            let n=prompt("Enter a number to find factorial");
+            n=parseInt(n);
+            let f=1;
+            for(let i=1;i<=n;i++)
+        {
+            f=f*i;
+        }
+        document.getElementById("fact").innerHTML=n +" ==>"+f;
+        }
+        </script>
+</head>
+<body>
+    <h1>FFactorial of given number:</h1>
+    <p id="fact"></p>
+    <button onclick="calculateFactorial()"> check</button>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voter Eligibility Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f0f8ff;
+    }
+    h2 {
+      color: #323;
+    }
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      margin-top: 20px;
+      background-color: #fff;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    td {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🗳️ Voter Eligibility Checker</h2>
+
+  <script>
+    // Ask for name and age
+    const name = prompt("Please enter your name:");
+    const age = parseInt(prompt("Please enter your age:"), 10);
+
+    // Determine voting eligibility
+    let status = "";
+    if (!isNaN(age)) {
+      status = age >= 18 ? "✅ Can Vote" : "❌ Cannot Vote";
+    } else {
+      status = "⚠️ Invalid Age";
+    }
+
+    // Display the result in a table
+    document.write(`
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Voting Eligibility</th>
+        </tr>
+        <tr>
+          <td>${name || "Not Provided"}</td>
+          <td>${isNaN(age) ? "Invalid" : age}</td>
+          <td>${status}</td>
+        </tr>
+      </table>
+    `);
+  </script>
+
+</body>
+</html>
